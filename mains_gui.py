@@ -3,6 +3,8 @@ import requests
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QTableWidgetItem
 from PyQt5.QtCore import QTimer
 from loadcell_gui import Ui_MainWindow  # your generated GUI class
+import Inventory_gui  # ← Make sure this exists in the same folder
+
 
 class ESP32App(QMainWindow):
     def __init__(self):
@@ -19,6 +21,9 @@ class ESP32App(QMainWindow):
 
         self.update_table()  # Initial fetch
 
+        # === Connect Inventory button ===
+        self.ui.btn_inventory.clicked.connect(self.open_inventory)
+
     def update_table(self):
         try:
             response = requests.get(self.ip_address, timeout=5)
@@ -32,8 +37,22 @@ class ESP32App(QMainWindow):
         except Exception as e:
             QMessageBox.critical(self, "Connection Error", f"Could not connect to ESP32:\n{e}")
 
+    def open_inventory(self):
+        self.inventory_window = Inventory_gui.InventoryWindow()
+        self.inventory_window.center_window()
+        self.inventory_window.show()
+        self.close()
+
+    def center_window(self):
+        qr = self.frameGeometry()
+        cp = self.screen().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = ESP32App()
+    window.center_window()  # Optional: center the app on launch
     window.show()
     sys.exit(app.exec_())

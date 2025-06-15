@@ -6,69 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1318</width>
-    <height>872</height>
+    <width>1365</width>
+    <height>876</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="table">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>150</y>
-      <width>1081</width>
-      <height>541</height>
-     </rect>
-    </property>
-    <row>
-     <property name="text">
-      <string/>
-     </property>
-    </row>
-    <column>
-     <property name="text">
-      <string>Product Name</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Shelf</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Weight </string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
-      <string>Status</string>
-     </property>
-    </column>
-    <item row="0" column="0">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="0" column="1">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="0" column="2">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-    <item row="0" column="3">
-     <property name="text">
-      <string/>
-     </property>
-    </item>
-   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
@@ -108,62 +53,10 @@
      <string>WeighTrack</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btn_home">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>50</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Home</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_inventory">
-    <property name="geometry">
-     <rect>
-      <x>920</x>
-      <y>50</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Inventory</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_sales">
-    <property name="geometry">
-     <rect>
-      <x>1020</x>
-      <y>50</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sales Report</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_notify">
-    <property name="geometry">
-     <rect>
-      <x>1120</x>
-      <y>50</y>
-      <width>91</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Notification</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>1240</x>
+      <x>1290</x>
       <y>40</y>
       <width>51</width>
       <height>51</height>
@@ -183,11 +76,92 @@
      </size>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_notify">
+    <property name="geometry">
+     <rect>
+      <x>1170</x>
+      <y>50</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Notification</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_sales">
+    <property name="geometry">
+     <rect>
+      <x>1070</x>
+      <y>50</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sales Report</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_inventory">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>50</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Inventory</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_home">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>50</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>320</y>
+      <width>371</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Inventory</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1365</width>
+     <height>21</height>
+    </rect>
+   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="logo.qrc"/>
+  <include location="../../AppData/Roaming/Python/Python311/site-packages/qt5_applications/Qt/bin/logo.qrc"/>
  </resources>
  <connections/>
 </ui>
